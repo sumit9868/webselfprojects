@@ -1,0 +1,29 @@
+div{
+    height:100px;
+    width: 100px;
+    color: white;
+    background-color: red;
+    opacity: 0.5;
+    
+    text-align: center;
+    position: relative;
+}
+div p{
+    align-items: center;
+}
+#face1{
+ transform: translate(100px,0px);
+}
+#face2{
+}
+#face3{
+    
+}
+#face4{
+}
+#face5{
+    
+}
+#face6{
+    
+}
