@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>setInterval/clearInterval example</title>
+<script src="counter.js"></script>
+  <script>
+  let list=document.getElementById('list');
+let count=50;
+  let timer=setInterval(()=>{
+list.innerHTML=`<div>${count}</div>`;
+count--;
+if(count==0){
+  clearInterval(timer);
+}
+  },1000);
+
+  </script>
+</head>
+ <body>
+<!-- <body onload="changeColor();"> -->
+  <div id="list">
+    <!-- <p>Hello World</p> -->
+  </div>
+
+  <button onclick="stopTextColor();">Stop</button>
+</body>
+</html>
