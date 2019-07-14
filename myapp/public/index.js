@@ -1,0 +1,1 @@
+console.log('this is a js file serverd by the localhost')
