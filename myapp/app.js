@@ -2,7 +2,6 @@ const express=require('express')
 const app=express();
 
 
-app.use(express.static(__dirname+'/public'))
 
 app.get('/',(req,res)=>{
     res.send('hello world');
@@ -16,9 +15,11 @@ app.put('/user', function (req,res) {
 app.delete('/user',function (req,res) {
     res.send('Got a DELETE request at /user');   
 })
-app.all('/',function (req,res) {
-    res.send('in the app.all handler');
-})
+
+app.use(express.static(__dirname+'/public'))
+// app.all('/',function (req,res) {
+//     res.send('in the app.all handler');
+// })
 
 
 
