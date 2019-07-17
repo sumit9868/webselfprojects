@@ -1,28 +1,22 @@
-const express=require('express')
-const app=express();
+const express = require("express");
+const router = express();
 
+router.get("/", (req, res) => {
+  console.log("went into the car");
+  res.send("you are in the interior of the car");
+});
 
+router.get("/about", (req, res) => {
+  console.log("following are the details of your car");
+  res.send("you are in the interior of the car");
+});
 
-app.get('/',(req,res)=>{
-    res.send('hello world');
-})
-app.post('/', function (req,res) {
- res.send('Got a POST request');   
-})
-app.put('/user', function (req,res) {
-    res.send('Got a PUT request at /user');   
-})
-app.delete('/user',function (req,res) {
-    res.send('Got a DELETE request at /user');   
-})
+router.get("/engin", (req, res) => {
+  console.log("following are the details of your car's engin ");
+  res.send("you are here for the engine of the car");
+});
 
-app.use(express.static(__dirname+'/public'))
-// app.all('/',function (req,res) {
-//     res.send('in the app.all handler');
-// })
-
-
-
-app.listen(3000,()=>{
-    console.log('hello world, with all diffrent express requests');
-})
+// router.listen(3000, () => {
+//   console.log("you are listining to the port 3000");
+// });
+module.exports = router;
