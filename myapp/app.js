@@ -11,11 +11,12 @@ router.get("/about", (req, res) => {
   res.send("you are in the interior of the car");
 });
 
-router.get("/engin", (req, res) => {
+router.get("/engine", (req, res) => {
   console.log("following are the details of your car's engin ");
   res.send("you are here for the engine of the car");
 });
 
+router.post()
 // router.listen(3000, () => {
 //   console.log("you are listining to the port 3000");
 // });
